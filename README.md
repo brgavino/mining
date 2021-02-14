@@ -20,18 +20,22 @@ RVN = 7.3MH/s average @ 60W (60-75C temps : Should enable aggresive fan modes in
 Tuning power settings doesn't seem to be supported via AMD/rocm drivers
 
 **DO NOT INSTALL amdgpu-pro drivers**
+
 *Only compatible with Kernel 5.4.0-xx*
+
 Install rocm [https://github.com/RadeonOpenCompute/ROCm] with the opencl/rocminfo packages (don't need dkms)
 
 **Fix missing dependency for rocm4.0** [https://github.com/RadeonOpenCompute/ROCm/issues/1324]
+
 sudo apt install libtinfo5
 
 Add lines to /etc/ld.so.conf.d/hsa-rocr-dev.conf
 
-> /opt/rocm-4.0.0/hsa/lib
-> /opt/rocm-4.0.0/lib
-> /opt/rocm-4.0.0/opencl/lib
-
+>
+ /opt/rocm-4.0.0/hsa/lib
+ /opt/rocm-4.0.0/lib
+ /opt/rocm-4.0.0/opencl/lib
+>
 run ldconfig to get new link paths
 
 - add user to video group
