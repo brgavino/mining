@@ -33,13 +33,14 @@ sudo apt install libtinfo5
 
 Add lines to /etc/ld.so.conf.d/hsa-rocr-dev.conf
 
-`
+```
  /opt/rocm-4.0.0/hsa/lib
  
  /opt/rocm-4.0.0/lib
  
  /opt/rocm-4.0.0/opencl/lib
-`
+```
+
 run ldconfig to get new link paths
 
 - add user to video group
