@@ -17,6 +17,8 @@ TODO
 ETH mining does not work natively as in Windows. Using zombie mode, the terrible 140H/s rate at 60W should never be used
 RVN = 7.3MH/s average @ 60W (60-75C temps : Should enable aggresive fan modes in BIOS)
 
+Only nanominer seems to 
+
 Tuning power settings doesn't seem to be supported via AMD/rocm drivers
 
 **DO NOT INSTALL amdgpu-pro drivers**
@@ -31,11 +33,13 @@ sudo apt install libtinfo5
 
 Add lines to /etc/ld.so.conf.d/hsa-rocr-dev.conf
 
->
+`
  /opt/rocm-4.0.0/hsa/lib
+ 
  /opt/rocm-4.0.0/lib
+ 
  /opt/rocm-4.0.0/opencl/lib
->
+`
 run ldconfig to get new link paths
 
 - add user to video group
